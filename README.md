@@ -1,45 +1,66 @@
-# Solar-Battery-Charging-System
-Solar panel based battery charging monitoring system using Arduino.
-# ☀️ Solar Battery Charging Monitoring System 🔋
+# ☀️ Solar Battery Charging and Monitoring System
 
-## 📌 Project Overview
-This project demonstrates a **solar panel-based battery charging monitoring system** using Arduino.  
-The system monitors the battery voltage and indicates when the battery is fully charged using an LED indicator.
+## 🔋 Overview
 
-This project is designed and simulated using **Tinkercad Circuits**.
+This project demonstrates a **solar panel-based battery charging and monitoring system** using an **Arduino Uno**.  
+It is designed for both **educational demonstration** and **embedded systems learning**.
+
+The system monitors battery voltage using a **voltage divider circuit**, prevents overcharging using programmable logic, and provides visual status indication through an LED.
+
+The project is fully designed and simulated using **Tinkercad Circuits**.
 
 ---
 
-## ⚙️ Components Used
-- Arduino UNO
-- Solar Panel (Simulation)
-- 9V Battery (Simulated rechargeable battery)
-- Diode (1N4007) – Reverse current protection
-- 2 × 10kΩ Resistors – Voltage Divider
-- LED – Battery Full Indicator
-- 220Ω Resistor – LED Protection
+## 📦 Features
+
+- Solar panel charging simulation
+- Reverse current protection using diode
+- Battery voltage monitoring using Arduino
+- Overcharge detection logic
+- LED indication for battery full status
+- Serial Monitor output for real-time voltage tracking
+- Safe voltage sensing using voltage divider
+
+---
+
+## 🛠️ Components Used
+
+| Component            | Quantity | Description |
+|----------------------|----------|------------|
+| Arduino UNO          | 1        | Microcontroller |
+| Solar Panel          | 1        | DC source (Simulation) |
+| 9V Battery           | 1        | Simulated rechargeable battery |
+| Diode (1N4007)       | 1        | Reverse current protection |
+| 10kΩ Resistors       | 2        | Voltage divider |
+| LED                  | 1        | Battery Full Indicator |
+| 220Ω Resistor        | 1        | LED current limiting |
+| Breadboard & Wires   | -        | Connections |
 
 ---
 
 ## 🔌 Circuit Working Principle
 
-1. The solar panel provides DC voltage to charge the battery.
-2. A diode is used to prevent reverse current flow from the battery to the solar panel.
-3. A voltage divider circuit reduces battery voltage to a safe level (0–5V) for Arduino analog input.
-4. Arduino continuously monitors battery voltage.
-5. When battery voltage reaches **8.5V (full charge threshold for 9V battery)**:
-   - LED turns ON (Battery Full)
-6. If battery voltage is below 8.5V:
-   - LED remains OFF
+### 1️⃣ Solar Charging Section
+- Solar panel provides DC voltage.
+- Diode prevents reverse current flow from battery to solar panel.
+- Battery stores energy from solar source.
+
+### 2️⃣ Voltage Monitoring Section
+- A voltage divider (10kΩ + 10kΩ) reduces battery voltage to a safe 0–5V range.
+- Arduino reads scaled voltage at Analog Pin A0.
+- Actual battery voltage is calculated inside the program.
+
+### 3️⃣ Control Logic
+- If battery voltage ≥ **8.5V** → LED turns ON (Battery Full).
+- If battery voltage < **8.5V** → LED remains OFF.
+<img width="1466" height="712" alt="Screenshot 2026-03-02 143736" src="https://github.com/user-attachments/assets/68993d28-e7b5-4b17-8870-21c9a97d55a2" />
 
 ---
 
-## 🧠 Features
+## 🧠 System Logic
 
-- Battery voltage monitoring
-- Overcharge indication
-- Reverse current protection
-- Microcontroller-based control logic
-- Safe voltage sensing using voltage divider
-
----
+- 9V battery full threshold set at **8.5V**
+- Arduino continuously samples analog voltage
+- Converts ADC value to actual voltage
+- Compares against threshold
+- Activates LED accordingly
