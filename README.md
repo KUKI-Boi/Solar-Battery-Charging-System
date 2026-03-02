@@ -7,7 +7,7 @@ It is designed for both **educational demonstration** and **embedded systems lea
 
 The system monitors battery voltage using a **voltage divider circuit**, prevents overcharging using programmable logic, and provides visual status indication through an LED.
 
-The project is fully designed and simulated using **Tinkercad Circuits**.
+The project is fully designed and simulated using **Tinkercad Circuits**(https://www.tinkercad.com/things/eyWlE5wZN5B/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits).
 
 ---
 
