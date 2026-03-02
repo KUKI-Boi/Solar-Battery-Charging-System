@@ -34,7 +34,6 @@ The project is fully designed and simulated using [**Tinkercad Circuits**](https
 | 10kΩ Resistors       | 2        | Voltage divider |
 | LED                  | 1        | Battery Full Indicator |
 | 220Ω Resistor        | 1        | LED current limiting |
-| Breadboard & Wires   | -        | Connections |
 
 ---
 
