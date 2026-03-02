@@ -52,7 +52,7 @@ The project is fully designed and simulated using [**Tinkercad Circuits**](https
 ### 3️⃣ Control Logic
 - If battery voltage ≥ **8.5V** → LED turns ON (Battery Full).
 - If battery voltage < **8.5V** → LED remains OFF.
-- 
+  
 <img width="1466" height="712" alt="Screenshot 2026-03-02 143736" src="https://github.com/user-attachments/assets/68993d28-e7b5-4b17-8870-21c9a97d55a2" />
 
 **Circuit Diagram**
